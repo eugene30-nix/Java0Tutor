@@ -5,6 +5,9 @@
 package com.erozenfeld.util;
 
 import java.util.Scanner;
+import java.math.BigDecimal;
+
+
 
 /**
  *
@@ -18,8 +21,33 @@ public class InOutHelper {
         return scanner.nextDouble();
     }
     
+    public BigDecimal readBigDecimal(String prompt) {
+        System.out.print(prompt);
+        return new BigDecimal(scanner.next());
+    }
+    
+    public int readInt(String prompt) {
+        System.out.print(prompt);
+        return scanner.nextInt();
+    }
+    
     public void write(String prompt, double value) {
         System.out.println(prompt + value);
     }
     
+    public void write(String prompt, BigDecimal value) {
+        System.out.println(prompt + value);
+    }
+    
+    public void write(String prompt, int value) {
+        System.out.println(prompt + value);
+    }
+    
+    public void write(String prompt, String value) {
+        System.out.println(prompt + value);
+    }
+
+    public void write(String prompt, boolean value) {
+        System.out.println(prompt + value);
+    }
 }
