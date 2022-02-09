@@ -8,20 +8,17 @@ import com.erozenfeld.util.InOutHelper;
 
 /**
  *
- * @author eugene30
+ * @author Администратор
  */
-public class Drill1 {
+public class Drill3 {
     public static void main(String[] args) {
         InOutHelper helper = new InOutHelper();
         int rowCount = helper.readInt("N=");
         int columnCount = helper.readInt("M=");
-        int[][] intMatrix = helper.readIntMatrix("A[N,M]=", rowCount, columnCount);
-
-        for (int columnIndex = 0; columnIndex < columnCount; columnIndex += 2) {
-            if (intMatrix[0][columnIndex] 
-                    > intMatrix[rowCount - 1][columnIndex])
-                helper.write("column " + (columnIndex + 1) + ": ", intMatrix, 
-                        columnIndex);
-        }
+        int [][] intMatrix = helper.readIntMatrix("A[N,M]=", rowCount, columnCount);
+        int rowIndex = helper.readInt("K=");
+        helper.write("row " + rowIndex + ": ", intMatrix[rowIndex - 1]);
+        int columnIndex = helper.readInt("P=");
+        helper.write("column " + columnIndex + ": ", intMatrix, columnIndex - 1);
     }
 }

@@ -5,9 +5,6 @@
 package com.erozenfeld.algorithm.vector;
 
 import com.erozenfeld.util.InOutHelper;
-import java.math.BigDecimal;
-import javax.script.ScriptEngine;
-import jdk.nashorn.api.scripting.ScriptUtils;
 
 /**
  *
